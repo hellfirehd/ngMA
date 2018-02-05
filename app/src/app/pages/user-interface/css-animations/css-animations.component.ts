@@ -19,16 +19,16 @@ export class CssAnimationsComponent implements OnInit {
     fadingExits: '',
     zoomEntrances: '',
     zoomExits: ''
-  }
-  animationDuration: number = 0
+  };
+  animationDuration = 0;
 
   setAnimation(animationGroup, animation) {
-    this.animationClasses[animationGroup] = animation
-    this.animationDuration = animation === 'hinge' ? 2100 : 1200
+    this.animationClasses[animationGroup] = animation;
+    this.animationDuration = animation === 'hinge' ? 2100 : 1200;
 
     setTimeout(() => {
-      this.animationClasses[animationGroup] = ''
-    }, this.animationDuration)
+      this.animationClasses[animationGroup] = '';
+    }, this.animationDuration);
   }
 
   constructor() { }

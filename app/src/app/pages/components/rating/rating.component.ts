@@ -6,21 +6,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./rating.component.scss']
 })
 export class RatingComponent implements OnInit {
-  ratingsValue: number = 5
+  ratingsValue = 5;
 
-  max:number = 10;
-  rate:number = 7;
-  isReadonly:boolean = false;
+  max = 10;
+  rate = 7;
+  isReadonly = false;
 
-  overStar:number;
-  percent:number;
+  overStar: number;
+  percent: number;
 
-  hoveringOver(value:number):void {
+  hoveringOver(value: number): void {
     this.overStar = value;
     this.percent = 100 * (value / this.max);
-  };
+  }
 
-  resetStar():void {
+  resetStar(): void {
     this.overStar = void 0;
   }
 

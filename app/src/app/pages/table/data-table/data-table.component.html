@@ -16,7 +16,6 @@
     </div>
   </header>
 
-
   <div class="card">
     <div class="card-body">
       <h4 class="card-title">ng2-Table</h4>
@@ -25,30 +24,18 @@
       <div class="data-table">
         <div class="data-table__header">
           <div class="form-group data-table__filter">
-            <input *ngIf="config.filtering"
-                   placeholder="Filter all columns"
-                   [ngTableFiltering]="config.filtering"
-                   class="form-control"
-                   (tableChanged)="onChangeTable(config)"/>
+            <input *ngIf="config.filtering" placeholder="Filter all columns" [ngTableFiltering]="config.filtering" class="form-control"
+              (tableChanged)="onChangeTable(config)" />
             <i class="form-group__bar"></i>
           </div>
         </div>
 
-        <ng-table [config]="config"
-                  (tableChanged)="onChangeTable(config)"
-                  [rows]="rows" [columns]="columns">
+        <ng-table [config]="config" (tableChanged)="onChangeTable(config)" [rows]="rows" [columns]="columns">
         </ng-table>
 
         <div class="data-table__footer">
-          <pagination *ngIf="config.paging"
-                      [(ngModel)]="page"
-                      [totalItems]="length"
-                      [itemsPerPage]="itemsPerPage"
-                      [maxSize]="maxSize"
-                      [boundaryLinks]="true"
-                      [rotate]="false"
-                      (pageChanged)="onChangeTable(config, $event)"
-                      (numPages)="numPages = $event">
+          <pagination *ngIf="config.paging" [(ngModel)]="page" [totalItems]="length" [itemsPerPage]="itemsPerPage" [maxSize]="maxSize"
+            [boundaryLinks]="true" [rotate]="false" (pageChanged)="onChangeTable(config, $event)" (numPages)="numPages = $event">
           </pagination>
         </div>
       </div>

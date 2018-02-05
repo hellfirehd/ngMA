@@ -12,12 +12,12 @@ export class FormComponentsComponent implements OnInit {
   maskDate: any = [/[1-9]/, /\d/, '/', /\d/, /\d/, '/', /\d/, /\d/, /\d/, /\d/];
   maskTime: any = [/[1-9]/, /\d/, ':', /\d/, /\d/, ':', /\d/, /\d/];
   maskDateTime: any = [/[1-9]/, /\d/, '/', /\d/, /\d/, '/', /\d/, /\d/, /\d/, /\d/, ' ', /\d/, /\d/, ':', /\d/, /\d/, ':', /\d/, /\d/];
-  maskCEP: any = [/[1-9]/, /\d/, /\d/, /\d/, /\d/, '-', /\d/, /\d/,/\d/];
-  maskCPF: any = [/[1-9]/, /\d/, /\d/, '.', /\d/, /\d/,/\d/, /\d/, /\d/,/\d/, '-', /\d/, /\d/];
+  maskCEP: any = [/[1-9]/, /\d/, /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/];
+  maskCPF: any = [/[1-9]/, /\d/, /\d/, '.', /\d/, /\d/, /\d/, /\d/, /\d/, /\d/, '-', /\d/, /\d/];
   maskCreditCard: any = [/[1-9]/, /\d/, /\d/, /\d/, ' ', /\d/, /\d/, /\d/, /\d/, ' ', /\d/, /\d/, /\d/, /\d/, ' ', /\d/, /\d/, /\d/, /\d/, ' '];
   maskPhone: any = [/[1-9]/, /\d/, /\d/, '-', /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/, /\d/, /\d/, /\d/];
-  maskPhoneOdd: any = ['(', /[1-9]/, /\d/,')', ' ', /\d/, /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/];
-  maskPhoneUS: any = ['(', /[1-9]/, /\d/, /\d/,')', ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/];
+  maskPhoneOdd: any = ['(', /[1-9]/, /\d/, ')', ' ', /\d/, /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/];
+  maskPhoneUS: any = ['(', /[1-9]/, /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/];
   maskMoney: any = ['$', /[1-9]/, /\d/, /\d/, '.', /\d/, /\d/, /\d/, '.', /\d/, /\d/, /\d/, '.', /\d/, /\d/, /\d/, '.', /\d/, /\d/, /\d/, ',', /\d/, /\d/];
   maskIP: any = [/[1-9]/, /\d/, /\d/, '.', /\d/, /\d/, /\d/, '.', /\d/, /\d/, /\d/, '.', /\d/, /\d/, /\d/];
   maskPercentage: any = [/[1-9]/, /\d/, '.', /\d/, /\d/, '%'];
@@ -27,7 +27,7 @@ export class FormComponentsComponent implements OnInit {
   select2Data: Array<Select2OptionData> = [
     { id: '1', text: 'Hyundai' },
     { id: '2', text: 'Kia' },
-    { id: '3', text: 'Nissan'},
+    { id: '3', text: 'Nissan' },
     { id: '4', text: 'Subaru' },
     { id: '5', text: 'Scion' },
     { id: '6', text: 'Subaru' },
@@ -40,7 +40,7 @@ export class FormComponentsComponent implements OnInit {
   select2DataPlaceholder: Array<Select2OptionData> = [
     { id: '', text: '' },
     { id: '2', text: 'Kia' },
-    { id: '3', text: 'Nissan'},
+    { id: '3', text: 'Nissan' },
     { id: '4', text: 'Subaru' },
     { id: '5', text: 'Scion' },
     { id: '6', text: 'Subaru' },
@@ -53,7 +53,7 @@ export class FormComponentsComponent implements OnInit {
   select2DataDisabled: Array<Select2OptionData> = [
     { id: '1', text: 'Hyundai', disabled: true },
     { id: '2', text: 'Kia' },
-    { id: '3', text: 'Nissan', disabled: true},
+    { id: '3', text: 'Nissan', disabled: true },
     { id: '4', text: 'Subaru', disabled: true },
     { id: '5', text: 'Scion' },
     { id: '6', text: 'Subaru' },
@@ -98,7 +98,7 @@ export class FormComponentsComponent implements OnInit {
 
 
   // Dropzone
-  dropzonePostUrl:any = 'dropzonePostUrl'
+  dropzonePostUrl: any = 'dropzonePostUrl'
 
 
   // Date Picker
@@ -114,5 +114,5 @@ export class FormComponentsComponent implements OnInit {
   inputSliderRangeValue: number[] = [5, 15];
 
   constructor() { }
-  ngOnInit() {}
+  ngOnInit() { }
 }

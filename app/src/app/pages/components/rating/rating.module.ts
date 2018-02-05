@@ -5,23 +5,23 @@ import { RouterModule } from '@angular/router';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { RatingModule } from 'ngx-bootstrap/rating';
 
-import { RatingComponent } from "./rating.component";
+import { RatingComponent } from './rating.component';
 
 const RATING_ROUTES = [
-    { path: '', component: RatingComponent }
-]
+  { path: '', component: RatingComponent }
+];
 
-@NgModule ({
-    declarations: [
-        RatingComponent
-    ],
-    imports: [
-        CommonModule,
-        FormsModule,
-        BsDropdownModule.forRoot(),
-        RatingModule.forRoot(),
-        RouterModule.forChild(RATING_ROUTES)
-    ]
+@NgModule({
+  declarations: [
+    RatingComponent
+  ],
+  imports: [
+    CommonModule,
+    FormsModule,
+    BsDropdownModule.forRoot(),
+    RatingModule.forRoot(),
+    RouterModule.forChild(RATING_ROUTES)
+  ]
 })
 
-export class RatingComponentModule {  }
+export class RatingComponentModule { }

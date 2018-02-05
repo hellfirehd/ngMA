@@ -4,12 +4,12 @@ import { Component, OnInit } from '@angular/core';
   selector: 'widget-visitors',
   templateUrl: './visitors.component.html',
   styleUrls: [
-      './visitors.component.scss'
+    './visitors.component.scss'
   ]
 })
 export class VisitorsComponent implements OnInit {
-  visitorsMap:any;
-  visitorsData:any;
+  visitorsMap: any;
+  visitorsData: any;
 
   constructor() {
     this.visitorsMap = {
@@ -26,7 +26,7 @@ export class VisitorsComponent implements OnInit {
       onRegionClick: function (event) {
         event.preventDefault();
       }
-    }
+    };
 
     this.visitorsData = [
       {
@@ -64,7 +64,7 @@ export class VisitorsComponent implements OnInit {
         os: 'Windows',
         img: './assets/demo/img/flags/Japan.png'
       }
-    ]
+    ];
   }
 
   ngOnInit() {

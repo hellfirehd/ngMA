@@ -1,7 +1,8 @@
 <section class="content">
   <header class="content__title">
     <h1>Sortable</h1>
-    <small>The sortable component represents a list of items, with ability to sort them or move to another container via drag & drop.</small>
+    <small>The sortable component represents a list of items, with ability to sort them or move to another container via drag &amp;
+      drop.</small>
 
     <div class="actions">
       <a class="actions__item zmdi zmdi-trending-up" [routerLink]="['/components/sortable']"></a>
@@ -21,13 +22,8 @@
     <div class="card-body">
       <h4 class="card-title">Basic example</h4>
 
-      <bs-sortable
-              [(ngModel)]="sortableData"
-              itemClass="sortable__item"
-              itemActiveClass="sortable__active"
-              placeholderItem="Drag here"
-              placeholderClass="sortable__placeholder"
-              wrapperClass="sortable">
+      <bs-sortable [(ngModel)]="sortableData" itemClass="sortable__item" itemActiveClass="sortable__active" placeholderItem="Drag here"
+        placeholderClass="sortable__placeholder" wrapperClass="sortable">
       </bs-sortable>
     </div>
   </div>
@@ -36,14 +32,8 @@
     <div class="card-body">
       <h4 class="card-title">Complex data model</h4>
 
-      <bs-sortable
-              [(ngModel)]="sortableComplexData"
-              fieldName="name"
-              itemClass="sortable__item"
-              itemActiveClass="sortable__active"
-              placeholderItem="Drag here"
-              placeholderClass="sortable__placeholder"
-              wrapperClass="sortable">
+      <bs-sortable [(ngModel)]="sortableComplexData" fieldName="name" itemClass="sortable__item" itemActiveClass="sortable__active"
+        placeholderItem="Drag here" placeholderClass="sortable__placeholder" wrapperClass="sortable">
       </bs-sortable>
 
       <br>

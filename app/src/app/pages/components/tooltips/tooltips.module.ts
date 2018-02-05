@@ -4,22 +4,22 @@ import { RouterModule } from '@angular/router';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 
-import { TooltipsComponent } from "./tooltips.component";
+import { TooltipsComponent } from './tooltips.component';
 
 const TOOLTIPS_ROUTES = [
-    { path: '', component: TooltipsComponent }
-]
+  { path: '', component: TooltipsComponent }
+];
 
-@NgModule ({
-    declarations: [
-        TooltipsComponent
-    ],
-    imports: [
-        CommonModule,
-        BsDropdownModule.forRoot(),
-        TooltipModule.forRoot(),
-        RouterModule.forChild(TOOLTIPS_ROUTES)
-    ]
+@NgModule({
+  declarations: [
+    TooltipsComponent
+  ],
+  imports: [
+    CommonModule,
+    BsDropdownModule.forRoot(),
+    TooltipModule.forRoot(),
+    RouterModule.forChild(TOOLTIPS_ROUTES)
+  ]
 })
 
-export class TooltipsComponentModule {  }
+export class TooltipsComponentModule { }

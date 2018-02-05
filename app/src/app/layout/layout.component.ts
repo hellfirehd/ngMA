@@ -10,8 +10,8 @@ export class LayoutComponent implements OnInit {
 
   constructor(private sharedService: SharedService) {
     sharedService.maThemeSubject.subscribe((value) => {
-      this.maTheme = value
-    })
+      this.maTheme = value;
+    });
   }
 
   ngOnInit() {

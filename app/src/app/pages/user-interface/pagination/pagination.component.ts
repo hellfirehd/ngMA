@@ -6,13 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pagination.component.scss']
 })
 export class PaginationComponent implements OnInit {
-  paginTotalItems: number = 64;
-  paginCurrentPage: number = 4;
-  paginNumPages: number = 0;
+  paginTotalItems = 64;
+  paginCurrentPage = 4;
+  paginNumPages = 0;
 
-  paginMaxSize:number = 5;
-  paginBigTotalItems:number = 175;
-  paginBigCurrentPage:number = 1;
+  paginMaxSize = 5;
+  paginBigTotalItems = 175;
+  paginBigCurrentPage = 1;
 
 
   setPage(pageNo: number): void {

@@ -49,18 +49,12 @@
       <h4 class="card-title">Dynamic ratings</h4>
       <h6 class="card-subtitle">Ratings with custom options enabled</h6>
 
-      <rating class="ratings"
-              [(ngModel)]="rate"
-              [max]="max"
-              [readonly]="isReadonly"
-              (onHover)="hoveringOver($event)"
-              (onLeave)="resetStar()"
-              [titles]="['one','two','three']">
+      <rating class="ratings" [(ngModel)]="rate" [max]="max" [readonly]="isReadonly" (onHover)="hoveringOver($event)" (onLeave)="resetStar()"
+        [titles]="['one','two','three']">
       </rating>
 
-      <span class="dynamic-ratings-label"
-            [ngClass]="{'dynamic-ratings-label--negative': percent<30, 'dynamic-ratings-label--normal': percent>=30 && percent<70, 'dynamic-ratings-label--positive': percent>=70}"
-            [ngStyle]="{display: (overStar && !isReadonly) ? 'inline' : 'none'}">{{percent}}%
+      <span class="dynamic-ratings-label" [ngClass]="{'dynamic-ratings-label--negative': percent<30, 'dynamic-ratings-label--normal': percent>=30 && percent<70, 'dynamic-ratings-label--positive': percent>=70}"
+        [ngStyle]="{display: (overStar && !isReadonly) ? 'inline' : 'none'}">{{percent}}%
       </span>
 
       <br>
@@ -80,7 +74,8 @@
   <div class="card">
     <div class="card-body">
       <h4 class="card-title">Custom icons and color</h4>
-      <h6 class="card-subtitle">You can use icons from <a [routerLink]="['/user-interface/icons']">Icons</a> page as shown in the below examples.</h6>
+      <h6 class="card-subtitle">You can use icons from
+        <a [routerLink]="['/user-interface/icons']">Icons</a> page as shown in the below examples.</h6>
 
       <rating class="ratings" [(ngModel)]="ratingsValue" [max]="10" stateOn="zmdi-circle" stateOff="zmdi-circle-o" style="color: #ff6b68;"></rating>
 

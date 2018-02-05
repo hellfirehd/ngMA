@@ -4,22 +4,22 @@ import { RouterModule } from '@angular/router';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 
-import { TabsComponent } from "./tabs.component";
+import { TabsComponent } from './tabs.component';
 
 const TABS_ROUTES = [
-    { path: '', component: TabsComponent }
-]
+  { path: '', component: TabsComponent }
+];
 
-@NgModule ({
-    declarations: [
-        TabsComponent
-    ],
-    imports: [
-        CommonModule,
-        BsDropdownModule.forRoot(),
-        TabsModule.forRoot(),
-        RouterModule.forChild(TABS_ROUTES)
-    ]
+@NgModule({
+  declarations: [
+    TabsComponent
+  ],
+  imports: [
+    CommonModule,
+    BsDropdownModule.forRoot(),
+    TabsModule.forRoot(),
+    RouterModule.forChild(TABS_ROUTES)
+  ]
 })
 
-export class TabsComponentModule {  }
+export class TabsComponentModule { }

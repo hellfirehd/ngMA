@@ -6,13 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./buttons.component.scss']
 })
 export class ButtonsComponent implements OnInit {
-  buttonSingleModel: string = '0';
-  buttonCheckModel:any = {
+  buttonSingleModel = '0';
+  buttonCheckModel: any = {
     left: false,
     middle: true,
     right: false
   };
-  buttonRadioModel: string = 'Middle';
+  buttonRadioModel = 'Middle';
 
   constructor() { }
 

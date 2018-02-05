@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SharedService } from "../../../shared/services/shared.service";
+import { SharedService } from '../../../shared/services/shared.service';
 
 @Component({
     selector: 'navigation-trigger',
@@ -11,15 +11,14 @@ export class NavigationTriggerComponent implements OnInit {
 
     constructor(private sharedService: SharedService) {
         sharedService.sidebarVisibilitySubject.subscribe((value) => {
-            this.sidebarVisible = value
-        })
+            this.sidebarVisible = value;
+        });
     }
 
     toggleSidebarVisibility() {
-        this.sharedService.toggleSidebarVisibilty()
+        this.sharedService.toggleSidebarVisibilty();
     }
 
     ngOnInit() {
-
     }
 }

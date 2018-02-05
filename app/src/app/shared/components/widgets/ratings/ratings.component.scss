@@ -1,12 +1,9 @@
 // Import Bootstrap and App variables and mixins
 @import "../../../../../assets/scss/inner-imports";
-
-
 .widget-ratings__star {
   font-size: 1.5rem;
   color: lighten($grey, 25%);
   margin: -1.5rem 0 1rem;
-
   .active {
     color: $amber;
   }
@@ -15,12 +12,10 @@
 .widget-ratings__item {
   @include clearfix();
   padding: 0.5rem 0;
-
   .float-left,
   .float-right {
     font-size: 1.15rem;
   }
-
   .float-left {
     .zmdi {
       font-size: 1.5rem;
@@ -31,7 +26,6 @@
       margin-left: 0.35rem;
     }
   }
-
   &:last-child {
     padding-bottom: 0;
   }

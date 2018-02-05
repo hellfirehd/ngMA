@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './recent-posts.component.html'
 })
 export class RecentPostsComponent implements OnInit {
-  recentPostData:any;
+  recentPostData: any;
 
   constructor() {
     this.recentPostData = [
@@ -34,7 +34,7 @@ export class RecentPostsComponent implements OnInit {
         post: 'Phasellus a ullamcorper lectus, sit amet viverra quam. In luctus tortor vel nulla pharetra bibendum',
         avatar: './assets/demo/img/profile-pics/5.jpg'
       },
-    ]
+    ];
   }
 
   ngOnInit() {

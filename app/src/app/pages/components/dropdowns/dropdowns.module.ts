@@ -3,21 +3,21 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 
-import { DropdownsComponent } from "./dropdowns.component";
+import { DropdownsComponent } from './dropdowns.component';
 
 const DROPDOWNS_ROUTES = [
-    { path: '', component: DropdownsComponent }
-]
+  { path: '', component: DropdownsComponent }
+];
 
-@NgModule ({
-    declarations: [
-        DropdownsComponent
-    ],
-    imports: [
-        CommonModule,
-        BsDropdownModule.forRoot(),
-        RouterModule.forChild(DROPDOWNS_ROUTES)
-    ]
+@NgModule({
+  declarations: [
+    DropdownsComponent
+  ],
+  imports: [
+    CommonModule,
+    BsDropdownModule.forRoot(),
+    RouterModule.forChild(DROPDOWNS_ROUTES)
+  ]
 })
 
-export class DropdownComponentModule {  }
+export class DropdownComponentModule { }

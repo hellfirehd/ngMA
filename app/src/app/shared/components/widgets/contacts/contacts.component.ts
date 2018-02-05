@@ -16,7 +16,7 @@ export class ContactsComponent implements OnInit {
       twitter: '@malinda (twitter.com/malinda)',
       address: '44-46 Morningside Road,  Edinburgh, Scotland',
       map: './assets/demo/img/widgets/map.png'
-    }
+    };
   }
 
   ngOnInit() {

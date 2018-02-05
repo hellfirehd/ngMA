@@ -20,14 +20,13 @@
   <div class="card">
     <div class="card-body">
       <h4 class="card-title">Basic examples</h4>
-      <h6 class="card-subtitle">Bootstrap's pagination is highly customized in Material Admin to match the overall look and feel of the template thus most of it's Bootstrap customization such as sizing, custom texts would not work here.</h6>
+      <h6 class="card-subtitle">Bootstrap's pagination is highly customized in Material Admin to match the overall look and feel of the template thus
+        most of it's Bootstrap customization such as sizing, custom texts would not work here.</h6>
 
       <h3 class="card-body__title">Complete</h3>
       <br>
 
-      <pagination [boundaryLinks]="true"
-                  [totalItems]="paginTotalItems"
-                  [(ngModel)]="paginCurrentPage">
+      <pagination [boundaryLinks]="true" [totalItems]="paginTotalItems" [(ngModel)]="paginCurrentPage">
       </pagination>
 
       <br>
@@ -35,9 +34,7 @@
       <h3 class="card-body__title">Boundary links disabled</h3>
       <br>
 
-      <pagination [totalItems]="paginTotalItems"
-                  [(ngModel)]="paginCurrentPage"
-                  (pageChanged)="pageChanged($event)">
+      <pagination [totalItems]="paginTotalItems" [(ngModel)]="paginCurrentPage" (pageChanged)="pageChanged($event)">
       </pagination>
 
       <br>
@@ -45,10 +42,7 @@
       <h3 class="card-body__title">Direction links disabled</h3>
       <br>
 
-      <pagination [directionLinks]="false"
-                  [boundaryLinks]="true"
-                  [totalItems]="paginTotalItems"
-                  [(ngModel)]="paginCurrentPage">
+      <pagination [directionLinks]="false" [boundaryLinks]="true" [totalItems]="paginTotalItems" [(ngModel)]="paginCurrentPage">
       </pagination>
 
       <br>
@@ -56,10 +50,7 @@
       <h3 class="card-body__title">Number only</h3>
       <br>
 
-      <pagination [directionLinks]="false"
-                  [totalItems]="paginTotalItems"
-                  [(ngModel)]="paginCurrentPage"
-                  (numPages)="paginNumPages = $event">
+      <pagination [directionLinks]="false" [totalItems]="paginTotalItems" [(ngModel)]="paginCurrentPage" (numPages)="paginNumPages = $event">
       </pagination>
 
       <br>
@@ -79,19 +70,13 @@
       <h4 class="card-title">States & Limits</h4>
       <h6 class="card-subtitle">Limit the maximum visible buttons</h6>
 
-      <pagination [totalItems]="paginBigTotalItems"
-                  [(ngModel)]="paginBigCurrentPage"
-                  [maxSize]="paginMaxSize"
-                  [boundaryLinks]="true">
+      <pagination [totalItems]="paginBigTotalItems" [(ngModel)]="paginBigCurrentPage" [maxSize]="paginMaxSize" [boundaryLinks]="true">
       </pagination>
 
       <br>
 
-      <pagination [totalItems]="paginBigTotalItems"
-                  [(ngModel)]="paginBigCurrentPage"
-                  [maxSize]="paginMaxSize"
-                  [boundaryLinks]="true"
-                  [rotate]="false" (numPages)="paginNumPages = $event">
+      <pagination [totalItems]="paginBigTotalItems" [(ngModel)]="paginBigCurrentPage" [maxSize]="paginMaxSize" [boundaryLinks]="true"
+        [rotate]="false" (numPages)="paginNumPages = $event">
       </pagination>
 
       <br>

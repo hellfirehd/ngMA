@@ -1,11 +1,8 @@
 // Import Bootstrap and App variables and mixins
 @import "../../../../assets/scss/inner-imports";
-
-
 @mixin search-float($bg-color, $color, $placeholder-color) {
   background-color: $bg-color;
   color: $color;
-
   &::placeholder {
     color: $placeholder-color;
     opacity: 1;
@@ -16,7 +13,6 @@
   flex: 1;
   margin-right: 2.5rem;
   position: relative;
-
   @include media-breakpoint-down(lg) {
     padding: 0 1.5rem;
     position: absolute;
@@ -29,16 +25,14 @@
     display: flex;
     align-items: center;
     @include transition(transform 300ms);
-
     &:not(.toggled) {
-      transform: translate3d(0,-105%,0);
+      transform: translate3d(0, -105%, 0);
     }
   }
 }
 
 .search {
   position: relative;
-
   @include media-breakpoint-down(lg) {
     max-width: 600px;
     margin: 0 auto;
@@ -53,15 +47,12 @@
   padding: 0 1rem 0 3rem;
   width: 100%;
   @include transition(background-color 300ms, color 300ms);
-
   @include media-breakpoint-up(lg) {
     @include search-float(rgba($white, 0.2), $white, $white);
-
     &:focus {
       @include search-float($gray-100, $input-color, lighten($input-color, 10%));
     }
   }
-
   @include media-breakpoint-down(lg) {
     @include search-float($gray-100, $input-color, lighten($input-color, 10%));
   }
@@ -78,16 +69,13 @@
   line-height: 3rem;
   cursor: pointer;
   @include transition(color 300ms, transform 400ms);
-
   @include media-breakpoint-down(lg) {
     color: $input-color;
     transform: rotate(180deg);
     line-height: 2.9rem;
-
     &:before {
       content: '\f301';
     }
-
     &:hover {
       opacity: 0.9;
     }
@@ -99,7 +87,6 @@
     color: lighten($input-color, 10%);
     transform: rotate(180deg);
     line-height: 2.9rem;
-
     &:before {
       content: '\f301';
     }

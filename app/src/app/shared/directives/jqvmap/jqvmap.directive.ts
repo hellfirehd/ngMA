@@ -1,27 +1,27 @@
-import { Directive, Input, ElementRef } from '@angular/core';
+import { Directive, Input, ElementRef, OnInit } from '@angular/core';
 
 declare var jQuery: any;
 
-@Directive ({
-    selector: '[JqvMap]'
+@Directive({
+  selector: '[JqvMap]'
 })
 
-export class JqvMapDirective {
-    @Input() private options:any;
-    @Input() private height:any;
+export class JqvMapDirective implements OnInit {
+  @Input() private options: any;
+  @Input() private height: any;
 
-    constructor (private el: ElementRef) { }
+  constructor(private el: ElementRef) { }
 
-    ngOnInit() {
-        let initJqvMap = jQuery(this.el.nativeElement);
+  ngOnInit() {
+    const initJqvMap = jQuery(this.el.nativeElement);
 
-        initJqvMap.css ({
-            height: this.height,
-            width: '100%'
-        });
+    initJqvMap.css({
+      height: this.height,
+      width: '100%'
+    });
 
-        initJqvMap.vectorMap(
-            this.options
-        );
-    }
+    initJqvMap.vectorMap(
+      this.options
+    );
+  }
 }

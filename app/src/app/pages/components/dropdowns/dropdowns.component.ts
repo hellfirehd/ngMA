@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DropdownsComponent implements OnInit {
 
-  public disabled: boolean = false;
+  public disabled = false;
 
   constructor() { }
 

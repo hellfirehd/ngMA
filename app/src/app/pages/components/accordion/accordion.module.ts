@@ -7,19 +7,19 @@ import { AccordionModule } from 'ngx-bootstrap/accordion';
 import { AccordionComponent } from './accordion.component';
 
 const ACCORDION_ROUTES = [
-    { path: '', component: AccordionComponent }
-]
+  { path: '', component: AccordionComponent }
+];
 
-@NgModule ({
-    declarations: [
-        AccordionComponent
-    ],
-    imports: [
-        CommonModule,
-        BsDropdownModule.forRoot(),
-        AccordionModule.forRoot(),
-        RouterModule.forChild(ACCORDION_ROUTES)
-    ]
+@NgModule({
+  declarations: [
+    AccordionComponent
+  ],
+  imports: [
+    CommonModule,
+    BsDropdownModule.forRoot(),
+    AccordionModule.forRoot(),
+    RouterModule.forChild(ACCORDION_ROUTES)
+  ]
 })
 
-export class AccordionComponentModule {  }
+export class AccordionComponentModule { }

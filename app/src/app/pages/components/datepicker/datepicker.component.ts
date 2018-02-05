@@ -10,14 +10,14 @@ export class DatepickerComponent implements OnInit {
   datePickerToggle: any = {
     1: false,
     2: false
-  }
+  };
 
   toggleDatePicker(datePicker) {
-    this.datePickerToggle[datePicker] = !this.datePickerToggle[datePicker]
+    this.datePickerToggle[datePicker] = !this.datePickerToggle[datePicker];
   }
 
   getDate(): number {
-    return this.datePickerValue && this.datePickerValue.getTime() || new Date().getTime()
+    return this.datePickerValue && this.datePickerValue.getTime() || new Date().getTime();
   }
 
   constructor() { }

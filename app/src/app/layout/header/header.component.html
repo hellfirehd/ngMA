@@ -2,16 +2,24 @@
   <navigation-trigger></navigation-trigger>
 
   <div class="header__logo">
-    <h1><a [routerLink]="['']">Material Admin 2.0</a></h1>
+    <h1>
+      <a [routerLink]="['']">Material Admin 2.0</a>
+    </h1>
   </div>
 
   <header-search #search class="toggled" [class.toggled]="search.searchActive"></header-search>
 
   <ul class="top-nav">
-    <li class="d-xl-none"><a (click)="search.searchActive = true"><i class="zmdi zmdi-search"></i></a></li>
+    <li class="d-xl-none">
+      <a (click)="search.searchActive = true">
+        <i class="zmdi zmdi-search"></i>
+      </a>
+    </li>
 
     <li dropdown>
-      <a dropdownToggle><i class="zmdi zmdi-email"></i></a>
+      <a dropdownToggle>
+        <i class="zmdi zmdi-email"></i>
+      </a>
       <div *dropdownMenu class="dropdown-menu dropdown-menu-right dropdown-menu--block" role="menu">
         <div class="listview listview--hover">
           <div class="listview__header">
@@ -40,7 +48,9 @@
     </li>
 
     <li dropdown>
-      <a dropdownToggle class="top-nav__notify"><i class="zmdi zmdi-notifications"></i></a>
+      <a dropdownToggle class="top-nav__notify">
+        <i class="zmdi zmdi-notifications"></i>
+      </a>
 
       <div *dropdownMenu class="dropdown-menu dropdown-menu-right dropdown-menu--block" role="menu">
         <div class="listview listview--hover">
@@ -67,7 +77,9 @@
     </li>
 
     <li dropdown class="d-none d-sm-inline-block">
-      <a dropdownToggle><i class="zmdi zmdi-apps"></i></a>
+      <a dropdownToggle>
+        <i class="zmdi zmdi-apps"></i>
+      </a>
 
       <div *dropdownMenu class="dropdown-menu dropdown-menu-right dropdown-menu--block" role="menu">
         <div class="row app-shortcuts">
@@ -100,7 +112,9 @@
     </li>
 
     <li dropdown class="d-none d-sm-inline-block">
-      <a dropdownToggle=""><i class="zmdi zmdi-check-circle"></i></a>
+      <a dropdownToggle="">
+        <i class="zmdi zmdi-check-circle"></i>
+      </a>
 
       <div *dropdownMenu class="dropdown-menu dropdown-menu-right dropdown-menu--block" role="menu">
         <div class="listview listview--hover">
@@ -111,7 +125,8 @@
               <div class="listview__heading mb-2">{{ task.name }}</div>
 
               <div class="progress">
-                <div [ngClass]="['progress-bar bg-'+ task.color]" [ngStyle]="{ 'width': task.completed+'%' }" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+                <div [ngClass]="['progress-bar bg-'+ task.color]" [ngStyle]="{ 'width': task.completed+'%' }" role="progressbar" aria-valuemin="0"
+                  aria-valuemax="100"></div>
               </div>
             </div>
           </a>
@@ -122,7 +137,9 @@
     </li>
 
     <li dropdown class="d-none d-sm-inline-block">
-      <a dropdownToggle=""><i class="zmdi zmdi-more-vert"></i></a>
+      <a dropdownToggle="">
+        <i class="zmdi zmdi-more-vert"></i>
+      </a>
 
       <div *dropdownMenu class="dropdown-menu dropdown-menu-right dropdown-menu--icon" role="menu">
         <div class="dropdown-item theme-switch">
@@ -141,7 +158,7 @@
             <label class="btn bg-blue-grey" [(ngModel)]="maThemeModel" btnRadio="blue-grey" uncheckable (click)="setTheme()"></label>
             <label class="btn bg-purple" [(ngModel)]="maThemeModel" btnRadio="purple" uncheckable (click)="setTheme()"></label>
             <label class="btn bg-indigo" [(ngModel)]="maThemeModel" btnRadio="indigo" uncheckable (click)="setTheme()"></label>
-            <label class="btn bg-lime" [(ngModel)]="maThemeModel" btnRadio="lime" uncheckabl (click)="setTheme()"e></label>
+            <label class="btn bg-lime" [(ngModel)]="maThemeModel" btnRadio="lime" uncheckabl (click)="setTheme()" e></label>
           </div>
         </div>
         <a href="" class="dropdown-item">Fullscreen</a>

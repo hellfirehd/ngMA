@@ -6,18 +6,18 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TableComponent } from './table.component';
 
 const TABLE_ROUTES: Routes = [
-    { path: '', component: TableComponent }
+  { path: '', component: TableComponent }
 ];
 
-@NgModule ({
-    declarations: [
-        TableComponent
-    ],
-    imports: [
-        CommonModule,
-        BsDropdownModule.forRoot(),
-        RouterModule.forChild(TABLE_ROUTES)
-    ]
+@NgModule({
+  declarations: [
+    TableComponent
+  ],
+  imports: [
+    CommonModule,
+    BsDropdownModule.forRoot(),
+    RouterModule.forChild(TABLE_ROUTES)
+  ]
 })
 
-export class TableModule {  }
+export class TableModule { }

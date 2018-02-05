@@ -4,31 +4,28 @@ import { Subject } from 'rxjs/Subject';
 @Injectable()
 export class SharedService {
 
-    // Sidebar visibility
-    sidebarVisible: boolean
-    sidebarVisibilitySubject: Subject<boolean> = new Subject<boolean>()
+  sidebarVisible: boolean;
+  sidebarVisibilitySubject: Subject<boolean> = new Subject<boolean>();
+  maTheme: string;
+  maThemeSubject: Subject<string> = new Subject<string>();
 
-    toggleSidebarVisibilty() {
-        this.sidebarVisible = !this.sidebarVisible
-        this.sidebarVisibilitySubject.next(this.sidebarVisible)
-    }
+  // Sidebar visibility
+  toggleSidebarVisibilty() {
+    this.sidebarVisible = !this.sidebarVisible;
+    this.sidebarVisibilitySubject.next(this.sidebarVisible);
+  }
 
-    // Theming
-    maTheme: string
-    maThemeSubject: Subject<string> = new Subject<string>()
+  // Theming
+  setTheme(color) {
+    this.maTheme = color;
+    this.maThemeSubject.next(this.maTheme);
+  }
 
-    setTheme(color) {
-        this.maTheme = color
-        this.maThemeSubject.next(this.maTheme)
-    }
+  constructor() {
+    // Hidden the sidebar by default
+    this.sidebarVisible = false;
 
-    constructor()  {
-        // Hidden the sidebar by default
-        this.sidebarVisible = false
-
-        // Set default theme as green
-        this.maTheme = 'green'
-    }
-
-
+    // Set default theme as green
+    this.maTheme = 'green';
+  }
 }

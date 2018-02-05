@@ -6,15 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sparklines.component.scss']
 })
 export class SparklinesComponent implements OnInit {
-  sparklineBarData: Array<any> = [6,9,5,6,3,7,5,4,6,5,6,4,2,5,8,2,6,9,5,7,2,5,2,8,6,7,6,5,3,1,9,3,5,8,2,4];
-  sparklineTristateData: Array<any> = [1,1,0,1,-1,-1,1,-1,0,0,1,1,-1,0,0,0,0,-1,1,1,1,-1,1-1,1,-1,0,0,1,1,-1,-1,1,-1,0,0,1,1];
-  sparklineDiscreteData: Array<any> = [4,6,7,7,4,3,2,1,4,4,5,7,1,9,5,3,6,3,1,0,8,4,3,5,1,5,7,4,4,4,1,2,4,7,1,9,5,3,6,3,1,0,8,4,3,5,9,9,9,9,9,4,1,1,1,4,2,4,3,7,6,8,9,6,4,6,4,3,6,3,7,2,3];
-  sparklineBulletData: Array<any> = [10,12,12,9,7];
-  sparklineLineData: Array<any> = [9,5,6,3,9,7,5,4,6,5,6,4,9];
+  sparklineBarData: Array<any> = [6, 9, 5, 6, 3, 7, 5, 4, 6, 5, 6, 4, 2, 5, 8, 2, 6, 9, 5, 7, 2, 5, 2, 8, 6, 7, 6, 5, 3, 1, 9, 3, 5, 8, 2, 4];
+  sparklineTristateData: Array<any> = [1, 1, 0, 1, -1, -1, 1, -1, 0, 0, 1, 1, -1, 0, 0, 0, 0, -1, 1, 1, 1, -1, 1 - 1, 1, -1, 0, 0, 1, 1, -1, -1, 1, -1, 0, 0, 1, 1];
+  sparklineDiscreteData: Array<any> = [4, 6, 7, 7, 4, 3, 2, 1, 4, 4, 5, 7, 1, 9, 5, 3, 6, 3, 1, 0, 8, 4, 3, 5, 1, 5, 7, 4, 4, 4, 1, 2, 4, 7, 1, 9, 5, 3, 6, 3, 1, 0, 8, 4, 3, 5, 9, 9, 9, 9, 9, 4, 1, 1, 1, 4, 2, 4, 3, 7, 6, 8, 9, 6, 4, 6, 4, 3, 6, 3, 7, 2, 3];
+  sparklineBulletData: Array<any> = [10, 12, 12, 9, 7];
+  sparklineLineData: Array<any> = [9, 5, 6, 3, 9, 7, 5, 4, 6, 5, 6, 4, 9];
   sparklinePieData: any = {
-    1: [1,1,2],
-    2: [1,1,1],
-    3: [1,3,1,1]
+    1: [1, 1, 2],
+    2: [1, 1, 1],
+    3: [1, 3, 1, 1]
   };
 
   sparklineBarOptions: any = {

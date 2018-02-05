@@ -1,7 +1,5 @@
 // Import Bootstrap and App variables and mixins
 @import "../../../assets/scss/inner-imports";
-
-
 // Header Base
 .header {
   position: fixed;
@@ -15,9 +13,7 @@
   align-items: center;
   top: 0;
   left: 0;
-
   @include clearfix();
-
   .ma-backdrop {
     position: absolute;
   }
@@ -28,35 +24,29 @@
   @include media-breakpoint-up(xl) {
     min-width: calc(#{$sidebar-width} - 2rem);
   }
-
   @include media-breakpoint-down(sm) {
     display: none;
   }
-
-  & > h1 {
+  &>h1 {
     line-height: 100%;
     font-size: 1.3rem;
     font-weight: normal;
     margin: 0;
-
-    & > a {
+    &>a {
       color: $white;
     }
   }
 }
-
 
 // Nav
 .top-nav {
   list-style: none;
   margin: 0 0 0 auto;
   padding: 0;
-
-  & > li {
+  &>li {
     display: inline-block;
     vertical-align: middle;
-
-    & > a {
+    &>a {
       display: block;
       color: $white;
       border-radius: 2px;
@@ -64,30 +54,24 @@
       line-height: 100%;
       position: relative;
       @include transition(background-color 300ms);
-
       &:not(.header__nav__text) {
         padding: 0.5rem 0.15rem;
         min-width: 50px;
-
-        & > .zmdi {
+        &>.zmdi {
           font-size: 1.65rem;
           line-height: 100%;
         }
       }
-
       &.active,
       &:hover {
         background-color: rgba($white, 0.2);
       }
     }
-
     .dropdown-menu--block {
       padding: 0;
     }
-
     @include media-breakpoint-down(xs) {
       position: static;
-
       .dropdown-menu--block {
         left: 20px !important;
         width: calc(100% - 40px);
@@ -100,7 +84,6 @@
 .top-nav__notifications {
   .listview {
     position: relative;
-
     &:before {
       @include font-icon('\f267', 2.5rem);
       @include transition(transform 300ms, opacity 300ms);
@@ -121,7 +104,6 @@
       line-height: 86px;
     }
   }
-
   .listview__scroll {
     height: 350px;
   }
@@ -154,7 +136,6 @@
   }
 }
 
-
 // App shortcuts
 .app-shortcuts {
   margin: 0;
@@ -166,12 +147,10 @@
   padding: 1rem 0;
   border-radius: $border-radius;
   @include transition(background-color 300ms);
-
   &:hover {
     background-color: $gray-100;
   }
-
-  & > i {
+  &>i {
     width: 45px;
     height: 45px;
     border-radius: 50%;
@@ -179,12 +158,10 @@
     line-height: 45px;
     font-size: 1.5rem;
   }
-
-  & > small {
+  &>small {
     display: block;
     margin-top: 0.5rem;
     font-size: 0.95rem;
-
     &,
     &:hover,
     &:focus {
@@ -192,7 +169,6 @@
     }
   }
 }
-
 
 // Top Navigation
 .top-menu {
@@ -204,19 +180,16 @@
   box-shadow: 0 3px 5px -2px rgba($black, 0.1);
   justify-content: center;
   white-space: nowrap;
-
-  & > li {
+  &>li {
     &.active {
       position: relative;
       box-shadow: 0 0 0 -2px red;
     }
-
-    & > a {
+    &>a {
       line-height: 100%;
       color: lighten($body-color, 15%);
       font-weight: $font-weight-bold;
       text-transform: uppercase;
-
       &.active {
         color: $headings-color;
       }

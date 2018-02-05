@@ -6,7 +6,7 @@ import {Component, OnInit} from '@angular/core';
     styleUrls: ['./time-picker.component.scss']
 })
 export class TimePickerComponent implements OnInit {
-    isTimePickerEnabled: boolean = true;
+    isTimePickerEnabled = true;
     timePickerValue: Date = new Date();
     timePickerMeridianValue: Date = new Date();
 

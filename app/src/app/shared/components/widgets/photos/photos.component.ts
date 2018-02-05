@@ -20,7 +20,7 @@ export class PhotosComponent implements OnInit {
       './assets/demo/img/widgets/headers/7.png',
       './assets/demo/img/widgets/headers/8.png',
       './assets/demo/img/widgets/headers/9.png'
-    ]
+    ];
 
   }
 
