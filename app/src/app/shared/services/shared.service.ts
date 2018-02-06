@@ -4,6 +4,8 @@ import { Subject } from 'rxjs/Subject';
 @Injectable()
 export class SharedService {
 
+  applicationTitle = 'PDSI';
+
   sidebarVisible: boolean;
   sidebarVisibilitySubject: Subject<boolean> = new Subject<boolean>();
   maTheme: string;
@@ -26,6 +28,6 @@ export class SharedService {
     this.sidebarVisible = false;
 
     // Set default theme as green
-    this.maTheme = 'green';
+    this.maTheme = 'indigo';
   }
 }

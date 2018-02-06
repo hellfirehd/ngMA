@@ -4,4 +4,4 @@ const ROUTES: Routes = [
   { path: '', loadChildren: './layout/layout.module#LayoutModule' }
 ];
 
-export const routing = RouterModule.forRoot(ROUTES);
+export const Routing = RouterModule.forRoot(ROUTES);
