@@ -3,6 +3,8 @@ import { SharedService } from '../../shared/services/shared.service';
 
 import { MessageData } from '../../services/message/message.data';
 import { MessageService } from '../../services/message/message.service';
+import { NotificationData } from '../../services/notifications/notification.data';
+import { NotificationService } from '../../services/notifications/notification.service';
 
 @Component({
   selector: 'app-header',
@@ -12,7 +14,8 @@ import { MessageService } from '../../services/message/message.service';
   ]
 })
 export class HeaderComponent implements OnInit {
-  messagesData: Array<any>;
+  messagesData: Array<MessageData>;
+  notificationsData: Array<NotificationData>;
   tasksData: Array<any>;
   maThemeModel = 'green';
 
@@ -22,7 +25,8 @@ export class HeaderComponent implements OnInit {
 
   constructor(
     private sharedService: SharedService,
-    private messageService: MessageService
+    private messageService: MessageService,
+    private notificationService: NotificationService
   ) {
     sharedService.maThemeSubject.subscribe((value) => {
       this.maThemeModel = value;
@@ -55,10 +59,16 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
     this.getMessages();
+    this.getNotifications();
   }
 
   getMessages(): void {
     this.messageService.getMessages()
-      .subscribe(messages => this.messagesData = messages);
+      .subscribe(data => this.messagesData = data);
+  }
+
+  getNotifications(): void {
+    this.notificationService.getNotifications()
+      .subscribe(data => this.notificationsData = data);
   }
 }
