@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
+import { MessageService } from './services/message/message.service';
 import { SharedService } from './shared/services/shared.service';
 import { Routing } from './app.routing';
 
@@ -19,6 +20,7 @@ import { Routing } from './app.routing';
     AppComponent
   ],
   providers: [
+    MessageService,
     SharedService,
     {
       provide: LocationStrategy,
