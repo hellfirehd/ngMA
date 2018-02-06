@@ -62,12 +62,12 @@
             </div>
           </div>
 
-          <a *ngFor="let message of messagesData" href="" class="listview__item">
-            <img [src]="message.image" class="listview__img" alt="">
+          <a *ngFor="let notification of notificationsData" href="" class="listview__item">
+            <img [src]="notification.image" class="listview__img" alt="">
 
             <div class="listview__content">
-              <h3 class="listview__heading">{{ message.name }}</h3>
-              <p>{{ message.message }}</p>
+              <h3 class="listview__heading">{{ notification.title }}</h3>
+              <p>{{ notification.message }}</p>
             </div>
           </a>
 
