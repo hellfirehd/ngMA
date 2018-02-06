@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from '../../../shared/shared.module';
-import { Autosize } from 'ng-autosize';
+// import { Autosize } from 'ng-autosize';  This directive is broken for Angular 5.x
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 
 import { FormElementsComponent } from './form-elements.component';
@@ -14,7 +14,7 @@ const FORM_ELEMENTS_ROUTES = [
 @NgModule({
   declarations: [
     FormElementsComponent,
-    Autosize
+    // Autosize
   ],
   imports: [
     CommonModule,

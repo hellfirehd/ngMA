@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Http } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-data-table',
@@ -336,7 +336,7 @@ export class DataTableComponent implements OnInit {
     this.length = sortedData.length;
   }
 
-  constructor(private http: Http) {
+  constructor(private http: HttpClient) {
     this.length = this.data.length;
   }
 
